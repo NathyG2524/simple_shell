@@ -121,7 +121,7 @@ No known Bugs.
 
 ## TEAM
 Abdisa Gemechu  : [LinkedIn/abdisag1] | [GitHub/abdisag1] \
-Natnael Girma : [LinkedIn/] | [GitHub/] 
+Natnael Girma : [LinkedIn/nathy] | [GitHub/NathyG2524] 
 
 [Article]: <https://www.linkedin.com/pulse/what-happens-when-you-type-ls-l-c-shell-abdisa-gemechu/?published=t/>
 [Holberton School]: <https://www.holbertonschool.com>
