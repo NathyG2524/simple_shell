@@ -121,14 +121,14 @@ No known Bugs.
 
 ## TEAM
 Abdisa Gemechu  : [LinkedIn/abdisag1] | [GitHub/abdisag1] \
-Natnael Girma : [LinkedIn/nathy] | [GitHub/NathyG2524] 
+Natnael Girma : [LinkedIn/nathy] | [GitHub/nathy] 
 
 [Article]: <https://www.linkedin.com/pulse/what-happens-when-you-type-ls-l-c-shell-abdisa-gemechu/?published=t/>
 [Holberton School]: <https://www.holbertonschool.com>
 [LinkedIn/abdisag1]: <https://www.linkedin.com/in/abdisag1/>
-[LinkedIn/mariem]: <https://www.linkedin.com/in/nathy-girma-6370281b9/>
+[LinkedIn/nathy]: <https://www.linkedin.com/in/nathy-girma-6370281b9/>
 [GitHub/abdisag1]: <https://github.com/abdisag1>
-[GitHub/mariem]: <https://github.com/MatriMariem>
+[GitHub/nathy]: <https://github.com/NathyG2524>
 
 
 ## AUTHORS DESCRIPTION (Abdisa Gemechu and Natnael Girma).
