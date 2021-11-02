@@ -17,7 +17,7 @@
  ****
 
 ## What is the shell?
-The shell is a program that takes commands from the keyboard via the terminal, and gives them to the operating system to perform.\
+>The shell is a program that takes commands from the keyboard via the terminal, and gives them to the operating system to perform.\
 **To better understand how the shell actually works, you can read our [Article].**
 
 ## About this project
