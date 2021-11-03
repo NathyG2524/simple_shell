@@ -94,7 +94,15 @@ exit
 > **2: Press on Ctrl + D**
 
 ## Example of Usage
-`builtins_help_1.c  err_m1.c           getline.c  input_helpers.c  proc_file_comm.c    split.c
+````
+vagrant@vagrant-ubuntu-trusty-64://home/vagrant/projects/simple_shell$ ./hsh
+$ echo Hello, This is an example
+Hello, This is an example
+$ ls
+alias_builtins.c   builtins_help_2.c  err_m2.c   helper.c         linkedlist.c        README.md  string_funcs1.c
+AUTHORS            env_builtins.c     errors.c   helpers_2.c      main.c              shell.h    string_funcs2.c
+builtin.c          environ.c          find.c     hsh              man_1_simple_shell  shell.png
+builtins_help_1.c  err_m1.c           getline.c  input_helpers.c  proc_file_comm.c    split.c
 $ ls -l
 total 168
 -rw-rw-r-- 1 vagrant vagrant  2886 Nov  3 06:01 alias_builtins.c
@@ -124,7 +132,7 @@ total 168
 -rw-rw-r-- 1 vagrant vagrant  1764 Nov  3 06:01 string_funcs1.c
 -rw-rw-r-- 1 vagrant vagrant  2029 Nov  3 06:01 string_funcs2.c
 $ exit
-vagrant@vagrant-ubuntu-trusty-64://home/vagrant/projects/simple_shell$```
+vagrant@vagrant-ubuntu-trusty-64://home/vagrant/projects/simple_shell$
 
 ````
 ## Bugs
