@@ -94,28 +94,38 @@ exit
 > **2: Press on Ctrl + D**
 
 ## Example of Usage
-````
-ubunto@ubuntu:~/Bureau/simple_shell$ gcc -Wall -Wextra -Werror -pedantic *.c -o hsh
-ubunto@ubuntu:~/Bureau/simple_shell$ ./hsh
-#cisfun$ echo Hello, This is an example
-Hello, This is an example
-#cisfun$ ls
-README.md  checkbuild.c  line_exec.c  shell.c  string.c
-buildin.c  hsh linkpath.c   shell.h
-#cisfun$ ^C
-#cisfun$ ls -l
-total 52
--rw-r--r-- 1 ubunto ubunto  3067 Nov 26 04:22 README.md
--rw-r--r-- 1 ubunto ubunto  2183 Nov 24 16:17 buildin.c
--rw-r--r-- 1 ubunto ubunto   574 Nov 24 15:59 checkbuild.c
--rwxr-xr-x 1 ubunto ubunto 18144 Nov 26 04:22 hsh
--rw-r--r-- 1 ubunto ubunto  2091 Nov 24 14:49 line_exec.c
--rw-r--r-- 1 ubunto ubunto  1926 Nov 24 14:30 linkpath.c
--rw-r--r-- 1 ubunto ubunto   951 Nov 24 16:09 shell.c
--rw-r--r-- 1 ubunto ubunto  1351 Nov 24 15:58 shell.h
--rw-r--r-- 1 ubunto ubunto  1727 Nov 24 14:30 string.c
-#cisfun$ exit
-ubunto@ubuntu:~/Bureau/simple_shell$
+`builtins_help_1.c  err_m1.c           getline.c  input_helpers.c  proc_file_comm.c    split.c
+$ ls -l
+total 168
+-rw-rw-r-- 1 vagrant vagrant  2886 Nov  3 06:01 alias_builtins.c
+-rw-rw-r-- 1 vagrant vagrant   157 Nov  2 16:03 AUTHORS
+-rw-rw-r-- 1 vagrant vagrant  4117 Nov  3 06:01 builtin.c
+-rw-rw-r-- 1 vagrant vagrant  3393 Nov  3 06:01 builtins_help_1.c
+-rw-rw-r-- 1 vagrant vagrant  1146 Nov  3 06:01 builtins_help_2.c
+-rw-rw-r-- 1 vagrant vagrant  3115 Nov  3 06:01 env_builtins.c
+-rw-rw-r-- 1 vagrant vagrant  1384 Nov  3 06:01 environ.c
+-rw-rw-r-- 1 vagrant vagrant  3256 Nov  3 06:01 err_m1.c
+-rw-rw-r-- 1 vagrant vagrant  1333 Nov  3 06:01 err_m2.c
+-rw-rw-r-- 1 vagrant vagrant  1529 Nov  3 06:01 errors.c
+-rw-rw-r-- 1 vagrant vagrant  2432 Nov  3 13:10 find.c
+-rw-rw-r-- 1 vagrant vagrant  2577 Nov  3 06:01 getline.c
+-rw-rw-r-- 1 vagrant vagrant  3422 Nov  3 06:01 helper.c
+-rw-rw-r-- 1 vagrant vagrant  3327 Nov  3 06:01 helpers_2.c
+-rwxrwxr-x 1 vagrant vagrant 41627 Nov  3 13:24 hsh
+-rw-rw-r-- 1 vagrant vagrant  4144 Nov  3 06:01 input_helpers.c
+-rw-rw-r-- 1 vagrant vagrant  2072 Nov  3 06:01 linkedlist.c
+-rw-rw-r-- 1 vagrant vagrant  2403 Nov  3 12:41 main.c
+-rw-rw-r-- 1 vagrant vagrant  5824 Nov  3 06:01 man_1_simple_shell
+-rw-rw-r-- 1 vagrant vagrant  2366 Nov  3 06:01 proc_file_comm.c
+-rw-rw-r-- 1 vagrant vagrant  4347 Nov  3 13:05 README.md
+-rw-rw-r-- 1 vagrant vagrant  3712 Nov  3 12:46 shell.h
+-rw-rw-r-- 1 vagrant vagrant  8751 Nov  2 12:36 shell.png
+-rw-rw-r-- 1 vagrant vagrant  1916 Nov  3 06:01 split.c
+-rw-rw-r-- 1 vagrant vagrant  1764 Nov  3 06:01 string_funcs1.c
+-rw-rw-r-- 1 vagrant vagrant  2029 Nov  3 06:01 string_funcs2.c
+$ exit
+vagrant@vagrant-ubuntu-trusty-64://home/vagrant/projects/simple_shell$```
+
 ````
 ## Bugs
 No known Bugs.
