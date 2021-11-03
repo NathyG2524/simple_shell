@@ -1,7 +1,9 @@
 # Simple Shell Project
 
 **A simple Unix command line interpreter**
+
 ![shell](/shell.png)
+
 
 ****
 ## Table of contents
