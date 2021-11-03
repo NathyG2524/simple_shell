@@ -1,134 +1,301 @@
-# Simple Shell Project
+# shellby - Simple Shell :shell:
 
-**A simple Unix command line interpreter**
+A simple UNIX command interpreter written as part of the low-level programming and algorithm track at Holberton School.
 
-![shell](/shell.png)
+## Description :speech_balloon:
 
-****
-## Table of contents
- - **What is the shell?**
- - **About this project**
- - **Essential Functionalities of the Simple Shell**
- - **List of allowed functions and system calls for this project**
- - **USAGE**
- - **Example of Usage**
- - **Bugs**
- - **TEAM**
- ****
+**Shellby** is a simple UNIX command language interpreter that reads commands from either a file or standard input and executes them.
 
-## What is the shell?
->The shell is a program that takes commands from the keyboard via the terminal, and gives them to the operating system to perform.\
-**To better understand how the shell actually works, you can read our [Article].**
+### Invocation :running:
 
-## About this project
-This project is a simple version of the linux shell made for [Holberton School] taking part of the "Low-level programming & Algorithm - Linux and Unix system programming" projects.\
-It is created using the **C programming Language** and it can do many functionalities that a real shell does.
+Usage: **shellby** [filename]
 
-## Essential Functionalities of the Simple Shell:
-> Displays a prompt "#cisfun$ " and waits for user input.\
-> Runs all commands of type "executable program" (ls and /bin/ls).\
-> Runs the following build_in commands: **exit**, **env**, **setenv** and **unsetenv**.\
-> Handles commands with arguments.\
-> Handles the PATH global variable.\
-> Handles The EOF (End Of File) condition.\
-> Handles the Ctrl + C signal -> It doesn't exit the shell
+To invoke **shellby**, compile all `.c` files in the repository and run the resulting executable:
 
-## List of allowed functions and system calls for this project
- - access (man 2 access)
- - chdir (man 2 chdir)
- - close (man 2 close)
- - closedir (man 3 closedir)
- - execve (man 2 execve)
- - exit (man 3 exit)
- - _exit (man 2 _exit)
- - fflush (man 3 fflush)
- - fork (man 2 fork)
- - free (man 3 free)
- - getcwd (man 3 getcwd)
- - getline (man 3 getline)
- - isatty (man 3 isatty)
- - kill (man 2 kill)
- - malloc (man 3 malloc)
- - open (man 2 open)
- - opendir (man 3 opendir)
- - perror (man 3 perror)
- - read (man 2 read)
- - readdir (man 3 readdir)
- - signal (man 2 signal)
- - stat (__xstat) (man 2 stat)
- - lstat (__lxstat) (man 2 lstat)
- - fstat (__fxstat) (man 2 fstat)
- - strtok (man 3 strtok)
- - wait (man 2 wait)
- - waitpid (man 2 waitpid)
- - wait3 (man 2 wait3)
- - wait4 (man 2 wait4)
- - write (man 2 write)
-****
+```
+gcc *.c -o shellby
+./shellby
+```
 
-## USAGE
-You can try our shell by following these steps:
-> **Step 1:** Clone our repository using this command, (you need to have git installed on your machine first)
-````
-git clone https://github.com/NathyG2524/simple_shell
-````
-> **Step 2:** Change directory to simple_shell:
-````
-cd simple_shell
-````
-> **Step 3:** Compile the C files in this way:
-````
-gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
-````
-> **Step 4:** Run the shell
-````
-./hsh
-````
-**Exiting the shell**
-When you want to exit the shell, you can use one of the following methods:
-> **1: Type the command "exit"**
-````
-exit
-````
-> **2: Press on Ctrl + D**
+**Shellby** can be invoked both interactively and non-interactively. If **shellby** is invoked with standard input not connected to a terminal, it reads and executes received commands in order.
 
-## Example of Usage
-````
-ubunto@ubuntu:~/Bureau/simple_shell$ gcc -Wall -Wextra -Werror -pedantic *.c -o hsh
-ubunto@ubuntu:~/Bureau/simple_shell$ ./hsh
-#cisfun$ echo Hello, This is an example
-Hello, This is an example
-#cisfun$ ls
-README.md  checkbuild.c  line_exec.c  shell.c  string.c
-buildin.c  hsh linkpath.c   shell.h
-#cisfun$ ^C
-#cisfun$ ls -l
-total 52
--rw-r--r-- 1 ubunto ubunto  3067 Nov 26 04:22 README.md
--rw-r--r-- 1 ubunto ubunto  2183 Nov 24 16:17 buildin.c
--rw-r--r-- 1 ubunto ubunto   574 Nov 24 15:59 checkbuild.c
--rwxr-xr-x 1 ubunto ubunto 18144 Nov 26 04:22 hsh
--rw-r--r-- 1 ubunto ubunto  2091 Nov 24 14:49 line_exec.c
--rw-r--r-- 1 ubunto ubunto  1926 Nov 24 14:30 linkpath.c
--rw-r--r-- 1 ubunto ubunto   951 Nov 24 16:09 shell.c
--rw-r--r-- 1 ubunto ubunto  1351 Nov 24 15:58 shell.h
--rw-r--r-- 1 ubunto ubunto  1727 Nov 24 14:30 string.c
-#cisfun$ exit
-ubunto@ubuntu:~/Bureau/simple_shell$
-````
-## Bugs
-No known Bugs.
+Example:
+```
+$ echo "echo 'hello'" | ./shellby
+'hello'
+$
+```
 
-## TEAM
-Abdisa Gemechu  : [LinkedIn/abdisag1] | [GitHub/abdisag1] \
-Natnael Girma : [LinkedIn/NathyG2524] | [GitHub/NathyG2524] 
+If **shellby** is invoked with standard input connected to a terminal (determined by [isatty](https://linux.die.net/man/3/isatty)(3)), an *interactive* shell is opened. When executing interactively, **shellby** displays the prompt `$ ` when it is ready to read a command.
 
-[Article]: <https://www.linkedin.com/pulse/what-happens-when-you-type-ls-l-c-shell-abdisa-gemechu/?published=t/>
-[Holberton School]: <https://www.holbertonschool.com>
-[LinkedIn/abdisag1]: <https://www.linkedin.com/in/abdisag1/>
-[LinkedIn/nathy]: <https://www.linkedin.com/in/nathy-girma-6370281b9/>
-[GitHub/abdisag1]: <https://github.com/abdisag1>
-[GitHub/nathy]: <https://github.com/NathyG2524>
+Example:
+```
+$./shellby
+$
+```
 
+Alternatively, if command line arguments are supplied upon invocation, **shellby** treats the first argument as a file from which to read commands. The supplied file should contain one command per line. **Shellby** runs each of the commands contained in the file in order before exiting.
 
-## AUTHORS DESCRIPTION (Abdisa Gemechu and Natnael Girma).
+Example:
+```
+$ cat test
+echo 'hello'
+$ ./shellby test
+'hello'
+$
+```
+
+### Environment :deciduous_tree:
+
+Upon invocation, **shellby** receives and copies the environment of the parent process in which it was executed. This environment is an array of *name-value* strings describing variables in the format *NAME=VALUE*. A few key environmental variables are:
+
+#### HOME
+The home directory of the current user and the default directory argument for the **cd** builtin command.
+
+```
+$ echo "echo $HOME" | ./shellby
+/home/vagrant
+```
+
+#### PWD
+The current working directory as set by the **cd** command.
+
+```
+$ echo "echo $PWD" | ./shellby
+/home/vagrant/holberton/simple_shell
+```
+
+#### OLDPWD
+The previous working directory as set by the **cd** command.
+
+```
+$ echo "echo $OLDPWD" | ./shellby
+/home/vagrant/holberton/printf
+```
+
+#### PATH
+A colon-separated list of directories in which the shell looks for commands. A null directory name in the path (represented by any of two adjacent colons, an initial colon, or a trailing colon) indicates the current directory.
+
+```
+$ echo "echo $PATH" | ./shellby
+/home/vagrant/.cargo/bin:/home/vagrant/.local/bin:/home/vagrant/.rbenv/plugins/ruby-build/bin:/home/vagrant/.rbenv/shims:/home/vagrant/.rbenv/bin:/home/vagrant/.nvm/versions/node/v10.15.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/vagrant/.cargo/bin:/home/vagrant/workflow:/home/vagrant/.local/bin
+```
+
+### Command Execution :hocho:
+
+After receiving a command, **shellby** tokenizes it into words using `" "` as a delimiter. The first word is considered the command and all remaining words are considered arguments to that command. **Shellby** then proceeds with the following actions:
+1. If the first character of the command is neither a slash (`\`) nor dot (`.`), the shell searches for it in the list of shell builtins. If there exists a builtin by that name, the builtin is invoked.
+2. If the first character of the command is none of a slash (`\`), dot (`.`), nor builtin, **shellby** searches each element of the **PATH** environmental variable for a directory containing an executable file by that name.
+3. If the first character of the command is a slash (`\`) or dot (`.`) or either of the above searches was successful, the shell executes the named program with any remaining given arguments in a separate execution environment.
+
+### Exit Status :wave:
+
+**Shellby** returns the exit status of the last command executed, with zero indicating success and non-zero indicating failure.
+
+If a command is not found, the return status is `127`; if a command is found but is not executable, the return status is 126.
+
+All builtins return zero on success and one or two on incorrect usage (indicated by a corresponding error message).
+
+### Signals :exclamation:
+
+While running in interactive mode, **shellby** ignores the keyboard input `Ctrl+c`. Alternatively, an input of end-of-file (`Ctrl+d`) will exit the program.
+
+User hits `Ctrl+d` in the third line.
+```
+$ ./shellby
+$ ^C
+$ ^C
+$
+```
+
+### Variable Replacement :heavy_dollar_sign:
+
+**Shellby** interprets the `$` character for variable replacement.
+
+#### $ENV_VARIABLE
+`ENV_VARIABLE` is substituted with its value.
+
+Example:
+```
+$ echo "echo $PWD" | ./shellby
+/home/vagrant/holberton/simple_shell
+```
+
+#### $?
+`?` is substitued with the return value of the last program executed.
+
+Example:
+```
+$ echo "echo $?" | ./shellby
+0
+```
+
+#### $$
+The second `$` is substitued with the current process ID.
+
+Example:
+```
+$ echo "echo $$" | ./shellby
+6494
+```
+
+### Comments :hash:
+
+**Shellby** ignores all words and characters preceeded by a `#` character on a line.
+
+Example:
+```
+$ echo "echo 'hello' #this will be ignored!" | ./shellby
+'hello'
+```
+
+### Operators :guitar:
+
+**Shellby** specially interprets the following operator characters:
+
+#### ; - Command separator
+Commands separated by a `;` are executed sequentially.
+
+Example:
+```
+$ echo "echo 'hello' ; echo 'world'" | ./shellby
+'hello'
+'world'
+```
+
+#### && - AND logical operator
+`command1 && command2`: `command2` is executed if, and only if, `command1` returns an exit status of zero.
+
+Example:
+```
+$ echo "error! && echo 'hello'" | ./shellby
+./shellby: 1: error!: not found
+$ echo "echo 'all good' && echo 'hello'" | ./shellby
+'all good'
+'hello'
+```
+
+#### || - OR logical operator
+`command1 || command2`: `command2` is executed if, and only if, `command1` returns a non-zero exit status.
+
+Example:
+```
+$ echo "error! || echo 'but still runs'" | ./shellby
+./shellby: 1: error!: not found
+'but still runs'
+```
+
+The operators `&&` and `||` have equal precedence, followed by `;`.
+
+### Shellby Builtin Commands :nut_and_bolt:
+
+#### cd
+  * Usage: `cd [DIRECTORY]`
+  * Changes the current directory of the process to `DIRECTORY`.
+  * If no argument is given, the command is interpreted as `cd $HOME`.
+  * If the argument `-` is given, the command is interpreted as `cd $OLDPWD` and the pathname of the new working directory is printed to standad output.
+  * If the argument, `--` is given, the command is interpreted as `cd $OLDPWD` but the pathname of the new working directory is not printed.
+  * The environment variables `PWD` and `OLDPWD` are updated after a change of directory.
+
+Example:
+```
+$ ./shellby
+$ pwd
+/home/vagrant/holberton/simple_shell
+$ cd ../
+$ pwd
+/home/vagrant/holberton
+$ cd -
+$ pwd
+/home/vagrant/holberton/simple_shell
+```
+
+#### alias
+  * Usage: `alias [NAME[='VALUE'] ...]`
+  * Handles aliases.
+  * `alias`: Prints a list of all aliases, one per line, in the form `NAME='VALUE'`.
+  * `alias NAME [NAME2 ...]`: Prints the aliases `NAME`, `NAME2`, etc. one per line, in the form `NAME='VALUE'`.
+  * `alias NAME='VALUE' [...]`: Defines an alias for each `NAME` whose `VALUE` is given. If `name` is already an alias, its value is replaced with `VALUE`.
+
+Example:
+```
+$ ./shellby
+$ alias show=ls
+$ show
+AUTHORS            builtins_help_2.c  errors.c         linkedlist.c        shell.h       test
+README.md          env_builtins.c     getline.c        locate.c            shellby
+alias_builtins.c   environ.c          helper.c         main.c              split.c
+builtin.c          err_msgs1.c        helpers_2.c      man_1_simple_shell  str_funcs1.c
+builtins_help_1.c  err_msgs2.c        input_helpers.c  proc_file_comm.c    str_funcs2.c
+```
+
+#### exit
+  * Usage: `exit [STATUS]`
+  * Exits the shell.
+  * The `STATUS` argument is the integer used to exit the shell.
+  * If no argument is given, the command is interpreted as `exit 0`.
+
+Example:
+```
+$ ./shellby
+$ exit
+```
+
+#### env
+  * Usage: `env`
+  * Prints the current environment.
+
+Example:
+```
+$ ./shellby
+$ env
+NVM_DIR=/home/vagrant/.nvm
+...
+```
+
+#### setenv
+  * Usage: `setenv [VARIABLE] [VALUE]`
+  * Initializes a new environment variable, or modifies an existing one.
+  * Upon failure, prints a message to `stderr`.
+
+Example:
+```
+$ ./shellby
+$ setenv NAME Poppy
+$ echo $NAME
+Poppy
+```
+
+#### unsetenv
+  * Usage: `unsetenv [VARIABLE]`
+  * Removes an environmental variable.
+  * Upon failure, prints a message to `stderr`.
+
+Example:
+```
+$ ./shellby
+$ setenv NAME Poppy
+$ unsetenv NAME
+$ echo $NAME
+
+$
+```
+
+## Authors :black_nib:
+
+* Alex Yu <[AlexYu01](https://github.com/AlexYu01)>
+* Brennan D Baraban <[bdbaraban](https://github.com/bdbaraban)>
+
+## License :lock:
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+
+## Acknowledgements :pray:
+
+**Shellby** emulates basic functionality of the **sh** shell. This README borrows form the Linux man pages [sh(1)](https://linux.die.net/man/1/sh) and [dash(1)](https://linux.die.net/man/1/dash).
+
+This project was written as part of the curriculum for Holberton School. Holberton School is a campus-based full-stack software engineering program that prepares students for careers in the tech industry using project-based peer learning. For more information, visit [this link](https://www.holbertonschool.com/).
+
+<p align="center">
+  <img src="http://www.holbertonschool.com/holberton-logo.png" alt="Holberton School logo">
+</p>
