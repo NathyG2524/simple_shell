@@ -1,6 +1,9 @@
 #include "shell.h"
 void sig_handler(int sig);
 int execute(char **args, char **front);
+char *name;
+/* Global history counter */
+int hist;
 /**
  * sig_handler - Prints a new prompt upon a signal.
  * @sig: The signal.
