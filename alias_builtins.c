@@ -37,7 +37,7 @@ print_alias(temp);
 break; }
 temp = temp->next;
 if (!temp)
-  ret = create_error(args + i, 1); }}
+ret = create_error(args + i, 1); }}
 else
 set_alias(args[i], value); }
 return (ret); }
