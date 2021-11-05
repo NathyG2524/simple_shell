@@ -140,7 +140,7 @@ No known Bugs.
 
 ## TEAM
 Abdisa Gemechu  : [LinkedIn/abdisag1] | [GitHub/abdisag1] \
-Natnael Girma : [LinkedIn/nathy-girma-6370281b9] | [GitHub/github.com/NathyG2524] 
+Natnael Girma : [LinkedIn/natnael] | [GitHub/github.com/Natnael] 
 
 [Article]: <https://www.linkedin.com/pulse/what-happens-when-you-type-ls-l-c-shell-abdisa-gemechu/?published=t/>
 [Holberton School]: <https://www.holbertonschool.com>
